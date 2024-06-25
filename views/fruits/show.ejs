@@ -14,11 +14,20 @@
             <%= fruit.name %>
         </h1> <!-- Display fruit name -->
         <!-- Add more details about the fruit here -->
+        <% if (fruit.emoji) { %>
+          <div class="emoji-show">
+            <p class="emoji">&#x<%= fruit.emoji %></p>
+          </div>
+        <% } else { %>
+          <div class="emoji-show">
+            <p class="emoji">&#x1F9FA</p>
+          </div>
+        <% } %>
         <!-- Conditional rendering based on fruit's readiness -->
         <% if (fruit.isReadyToEat) { %>
-            <p>This fruit is ready to eat!</p>
+            <p>✅ This fruit is ready to be eaten!</p>
         <% } else { %>
-            <p>This fruit is not ready to eat!</p>
+            <p>❌ This fruit is not ready to be eaten!</p>
         <% } %>
         <div class="fruit-actions">
             <form

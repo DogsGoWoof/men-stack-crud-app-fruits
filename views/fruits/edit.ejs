@@ -18,7 +18,24 @@
 
         <div class="checkbox-div">
             <label for="ready-to-eat">Ready to Eat?</label>
-            <input type="checkbox" name="isReadyToEat" id="ready-to-eat" />
+            <% if (fruit.isReadyToEat) { %>
+                <input type="checkbox" name="isReadyToEat" id="ready-to-eat" checked />
+            <% } else { %>
+                <input type="checkbox" name="isReadyToEat" id="ready-to-eat" />
+            <% } %>
+        </div>
+        <label for="emoji">Emoji Unicode:</label>
+        <div>
+        <input type="text" name="emoji" value="<%= fruit.emoji %>" style="display: inline;" />
+        <% if (fruit.emoji) { %>
+            <div class="emoji-bg">
+                <p class="emoji">&#x<%= fruit.emoji %></p>
+            </div>
+        <% } else { %>
+            <div class="emoji-bg">
+                <p class="emoji">&#x1F9FA</p>
+            </div>
+        <% } %>
         </div>
         <!-- update the button text -->
         <button type="submit">Update Fruit</button>
