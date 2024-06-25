@@ -248,6 +248,11 @@ img {
     border: .1dvh solid skyblue;
 }
 
+.emoji-index {
+    display: inline; 
+    font-size: 5dvh;
+}
+
 .emoji-show {
     display: inline; 
     font-size: 15dvh;
