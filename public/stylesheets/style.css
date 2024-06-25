@@ -250,4 +250,6 @@ img {
 
 .emoji-show {
     display: inline; 
+    font-size: 15dvh;
+    margin-top: -5dvh;
 }
